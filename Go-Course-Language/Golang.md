@@ -39,35 +39,70 @@ para esto es necesario la funcion main en el cuerpo del programa, a menos que el
 ```
 ##### Tipos de Datos
 + ** Enteros **
-    - Entero int
-    - Entero 16 bits ```Go
-     int16```
-    - Entero 32 bits ```Go
-     int32```
-    - Entero 64 bits ```Go
-     int64```
-
+    - Entero 
+    ```Go 
+        int
+    ```
+    - Entero 16 bits 
+    ```Go
+     int16
+     ```
+    - Entero 32 bits 
+    ```Go
+     int32
+     ```
+    - Entero 64 bits 
+    ```Go
+     int64
+     
 + ** Flotantes **
-    - Flotante 64 bits ```Go 
-    float64```
-    - Flotante 32 bits ```Go 
-    float32```
+    - Flotante 64 bits 
+    ```Go 
+    float64
+    ```
+    - Flotante 32 bits
+    ```Go 
+    float32
+    ```
 
 + ** Cadenas **
-    - Cadena de texto ```Go 
-    string```
+    - Cadena de texto 
+    ```Go 
+    string
+    ```
 
 + **Booleans
-    - Verdadero ```Go 
-    true```
-    - Falso ```Go 
-    false```
+    - Verdadero 
+    ```Go 
+    true
+    ```
+    - Falso 
+    ```Go 
+    false
+    ```
 
 + ** Estructuras **
+    ```Go
+        type nameStructure struct{
+            variables int
+            variabbles string
+            others float64
+        }
+    ```
 
 + ** Interfaces **
+    ```Go
+            type nameInterface interface{
+                nameFunc(Arguments) ReturnValues
+            }
+    ```
 
 + ** Funciones **
+    ```Go
+        func (r receptor) FunctionName(Argument) (Returns values{
+
+        }
+    ```
 
 ### Conversion de Tipos
 Esto es tan sencillo como lo siguiente
