@@ -119,18 +119,18 @@ Esto es tan sencillo como lo siguiente
 Para esto Compruebe la parte del [Paquete fmt](#fmt) para comprobar las estructira de las funciones y para verlo en practica cheque el [ejemplo](./Ejemplos/in_out.go)
 
 ## Operadores Aritmetico y logicos
-+ AND -> ```Go && ```
-+ OR  -> ```Go || ```
-+ NOT -> ```Go !  ```
-+ Suma -> ```Go + ```
-+ Resta -> ```Go - ```
-+ Multiplicacion -> ```Go  * ```
-+ Division -> ```Go / ```
-+ Modulo -> ```Go % ```
-+ Suma y Resta Unitaria -> ```Go ++ -- ```
-+ Channel in -> ```Go varchan<- ```
-+ Channel out -> ```Go <-varchan ```
-+ Tres puntos -> ```Go ...var o ...var //Depende ```
++ AND -> ``` && ```
++ OR  -> ``` || ```
++ NOT -> ``` !  ```
++ Suma -> ``` + ```
++ Resta -> ``` - ```
++ Multiplicacion -> ```  * ```
++ Division -> ``` / ```
++ Modulo -> ``` % ```
++ Suma y Resta Unitaria -> ``` ++ -- ```
++ Channel in -> ``` varchan<- ```
++ Channel out -> ``` <-varchan ```
++ Tres puntos -> ``` ...var o ...var //Depende ```
 
 <a name="fmt"></a>
 ## Package fmt
