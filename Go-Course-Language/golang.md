@@ -1,10 +1,11 @@
 # Golang
 
 ### Package
-    El package se debe llamar igual que el archivo, o el nombre del paquete en conjunto
+El package se debe llamar igual que el archivo, o el nombre del paquete en conjunto
 
 ### Imports
-    Esta palabra reservada nos ayuda a importar los packetes necesarios
+Esta palabra reservada nos ayuda a importar los packetes necesarios
+
 ```Go
     // Un solo paquetes
     import "packagename"
@@ -16,8 +17,9 @@
     )
 ```
 ### Main
-    Como en la mayoria de lenguajes,necesitamos indicar al compilador donde esta el cuerpo del flujo del programa,
-    para esto es necesario la funcion main en el cuerpo del programa, a menos que el archivo sea parte de un pacquete sin ser este anteriormente mensionado el main.go
+Como en la mayoria de lenguajes,necesitamos indicar al compilador donde esta el cuerpo del flujo del programa,
+para esto es necesario la funcion main en el cuerpo del programa, a menos que el archivo sea parte de un paquete sin ser este anteriormente mensionado el main.go
+
 ```Go
     func main(){
 
@@ -59,12 +61,84 @@
 
 + ** Funciones **
 
+### Conversion de Tipos
+Esto es tan sencillo como lo siguiente
 
+```Go
+// Sintaxis
+    <TipoDeDato>()
+// Ejemplo
+    int(5.22 )
+```
+### Condicionales
+
+#### If-Else
+```Go
+// Sintaxis
+    if condicion {
+
+    }else{
+
+    }
+// Ejemplo
+    var edad int = 18
+
+    if edad >= 18{
+        fmt.Print("Eres mayor de Edad")
+    }else{
+        fmt.Print("Aun eres joven")
+    }
+```
+#### Switch
+```Go
+// Sintaxis
+    switch variable_a_evaluar{
+        case valor1:
+            accion1
+        case valor2:
+            accion2
+        default:
+            acciondefault
+    }
+// Ejemplo
+    var edad int = 18
+
+    switch edad{
+        case 16:
+            fmt.Print(edad)
+        case 17:
+            fmt.Print(edad)
+        case 18:
+            fmt.Print(edad, "Ya eres mayor de edad")
+        default:
+            fmt.print("No se que onda contigo")
+    }
+```
+## Entrada y Salida de Datos
+
+Para esto Compruebe la parte del [Paquete fmt](#fmt) para comprobar las estructira de las funciones y para verlo en practica cheque el [ejemplo](./Ejemplos/in_out.go)
+
+## Operadores Aritmetico y logicos
++ AND -> ```Go && ```
++ OR  -> ```Go || ```
++ NOT -> ```Go !  ```
++ Suma -> ```Go + ```
++ Resta -> ```Go - ```
++ Multiplicacion -> ```Go  * ```
++ Division -> ```Go / ```
++ Modulo -> ```Go % ```
++ Suma y Resta Unitaria -> ```Go ++ -- ```
++ Channel in -> ```Go varchan<- ```
++ Channel out -> ```Go <-varchan ```
++ Tres puntos -> ```Go ...var o ...var //Depende ```
+
+<a name="fmt"></a>
 ## Package fmt
-    El paquete fmt o format, es el que nos permitira realizar operaciones con los busses de entrada y salida de la computadora
+El paquete fmt o format, es el que nos permitira realizar operaciones con los busses de entrada y salida de la computadora
 
 #### Salida a Pantalla
-    Las funciones para escribir en pantalla con las que cuenta fmt son:
+Las funciones para escribir en pantalla con las que cuenta fmt son:
+
 - Print: func Print(a ...interface{}) (n int, err error)
 
 - Println: func Println(a ...interface{}) (n int, err error)
@@ -76,7 +150,7 @@
 - Sprintf: func Sprintf(format string, a ...interface{}) string
 
 #### Entrada por teclado
-    Las funciones para leer por teclado son las siguientes:
+Las funciones para leer por teclado son las siguientes:
 
 - Scan: func Scan(a ...interface{}) (n int, err error)
 
