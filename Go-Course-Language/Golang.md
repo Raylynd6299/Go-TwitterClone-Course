@@ -40,20 +40,28 @@ para esto es necesario la funcion main en el cuerpo del programa, a menos que el
 ##### Tipos de Datos
 + ** Enteros **
     - Entero int
-    - Entero 16 bits int16
-    - Entero 32 bits int32
-    - Entero 64 bits int64
+    - Entero 16 bits ```Go
+     int16```
+    - Entero 32 bits ```Go
+     int32```
+    - Entero 64 bits ```Go
+     int64```
 
 + ** Flotantes **
-    - Flotante 64 bits float64
-    - Flotante 32 bits float32
+    - Flotante 64 bits ```Go 
+    float64```
+    - Flotante 32 bits ```Go 
+    float32```
 
 + ** Cadenas **
-    - Cadena de texto string
+    - Cadena de texto ```Go 
+    string```
 
 + **Booleans
-    - Verdadero true
-    - Falso false
+    - Verdadero ```Go 
+    true```
+    - Falso ```Go 
+    false```
 
 + ** Estructuras **
 
