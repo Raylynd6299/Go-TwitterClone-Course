@@ -139,23 +139,23 @@ El paquete fmt o format, es el que nos permitira realizar operaciones con los bu
 #### Salida a Pantalla
 Las funciones para escribir en pantalla con las que cuenta fmt son:
 
-- Print: func Print(a ...interface{}) (n int, err error)
+- Print: ```func Print(a ...interface{}) (n int, err error)```
 
-- Println: func Println(a ...interface{}) (n int, err error)
+- Println: ```func Println(a ...interface{}) (n int, err error)```
 
-- Printf: func Printf(format string, a ...interface{}) (n int, err error)
+- Printf: ```func Printf(format string, a ...interface{}) (n int, err error)```
 
-- Sprint: func Sprint(a ...interface{}) string
+- Sprint: ```func Sprint(a ...interface{}) string```
 
-- Sprintf: func Sprintf(format string, a ...interface{}) string
+- Sprintf: ```func Sprintf(format string, a ...interface{}) string```
 
 #### Entrada por teclado
 Las funciones para leer por teclado son las siguientes:
 
-- Scan: func Scan(a ...interface{}) (n int, err error)
+- Scan: ```func Scan(a ...interface{}) (n int, err error)```
 
-- Scanf: func Scanf(format string, a ...interface{}) (n int, err error)
+- Scanf: ```func Scanf(format string, a ...interface{}) (n int, err error)```
 
-- Scanln: func Scanln(a ...interface{}) (n int, err error)
+- Scanln: ```func Scanln(a ...interface{}) (n int, err error)```
 
-- Sscan: func Sscan(str string, a ...interface{}) (n int, err error)
+- Sscan: ```func Sscan(str string, a ...interface{}) (n int, err error)```
