@@ -274,6 +274,8 @@ Son objetos iterables muy parecidos a los slice solo que los indices no son nume
 
 Se dicen que un diccionario es un conjunto de elementos clave:valor
 
+[Aqui](./Ejemplos/maps.go) un ejemplo de Maps
+
 ```Go
 // Creacion de un map
     // Version 1
@@ -291,7 +293,6 @@ Se dicen que un diccionario es un conjunto de elementos clave:valor
 //Eliminar Datos
     delete(VariableMap,<Clave aa eliminar>)
 ```
-[Aqui](./Ejemplos/maps.go) un ejemplo de Maps
 
 <a name="fmt"></a>
 ## Package fmt
