@@ -71,7 +71,7 @@ para esto es necesario la funcion main en el cuerpo del programa, a menos que el
     string
     ```
 
-+ *** Booleans ***
++ ***Booleans***
     - Verdadero 
     ```Go 
     true
