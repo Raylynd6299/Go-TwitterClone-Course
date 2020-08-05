@@ -38,7 +38,7 @@ para esto es necesario la funcion main en el cuerpo del programa, a menos que el
     NombredeVarible := <Valor_a_asignar>
 ```
 ##### Tipos de Datos
-+ ** Enteros **
++ ***Enteros***
     - Entero 
     ```Go 
         int
@@ -55,7 +55,7 @@ para esto es necesario la funcion main en el cuerpo del programa, a menos que el
     ```Go
      int64
      
-+ ** Flotantes **
++ ***Flotantes***
     - Flotante 64 bits 
     ```Go 
     float64
@@ -65,13 +65,13 @@ para esto es necesario la funcion main en el cuerpo del programa, a menos que el
     float32
     ```
 
-+ ** Cadenas **
++ ***Cadenas***
     - Cadena de texto 
     ```Go 
     string
     ```
 
-+ **Booleans
++ *** Booleans ***
     - Verdadero 
     ```Go 
     true
@@ -81,8 +81,9 @@ para esto es necesario la funcion main en el cuerpo del programa, a menos que el
     false
     ```
 
-+ ** Estructuras **
-    Para más informaciń [aqui](#Estrucuras)
++ ***Estructuras***
+
+    Para más información [aqui](#Estrucuras)
     ```Go
         type nameStructure struct{
             variables int
@@ -91,14 +92,15 @@ para esto es necesario la funcion main en el cuerpo del programa, a menos que el
         }
     ```
 
-+ ** Interfaces **
++ ***Interfaces***
     ```Go
             type nameInterface interface{
                 nameFunc(Arguments) ReturnValues
             }
     ```
 
-+ ** Funciones **
++ ***Funciones***
+
     Puede Cheacar un ejemplo [aqui](./Ejemplos/function1.go)
     Y puede checar más informacion [aqui](#functions)
     ```Go
