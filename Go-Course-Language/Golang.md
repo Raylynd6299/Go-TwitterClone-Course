@@ -208,7 +208,7 @@ Para esto Compruebe la parte del [Paquete fmt](#fmt) para comprobar las estructi
 + Channel out -> ``` <-varchan ```
 + Tres puntos -> ``` ...var o ...var //Depende ```
     
-    Nota : Puede Cheacar un ejemplo [aqui](./Ejemplos/function1.go)
+    Nota : Puede Checar un ejemplo [aqui](./Ejemplos/function1.go)
 
 <a name="functions"></a>
 ## Funciones 
@@ -304,13 +304,14 @@ Se dicen que un diccionario es un conjunto de elementos clave:valor
 Una estructura es una forma de ordenar valores que tendran una relacion estrecha entre si, como pueden ser las caracteristicas de un objeto como tal, por lo que en ***Go*** se dice que a pesar de no contar con un manejo de POO como tal, que este si cuenta con el, esto es gracias a el uso de Estructuras.
 
 En el [ejemplo](./Ejemplos/Estructuras.go) podemos ver una muestra de esto los atributos metodos y herencia, como polimorfismo
-    ```Go
-        type nameStructure struct{
-            variables int
-            variabbles string
-            others float64
-        }
-    ```
+    
+```Go
+    type nameStructure struct{
+        variables int
+        variabbles string
+        others float64
+    }
+```
 
 
 
