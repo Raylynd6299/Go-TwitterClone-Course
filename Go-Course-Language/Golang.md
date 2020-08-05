@@ -98,6 +98,7 @@ para esto es necesario la funcion main en el cuerpo del programa, a menos que el
     ```
 
 + ** Funciones **
+    Puede Cheacar un ejemplo [aqui](./Ejemplos/function1.go)
     ```Go
         func (r receptor) FunctionName(Argument) (Returns values{
 
@@ -157,6 +158,34 @@ Esto es tan sencillo como lo siguiente
             fmt.print("No se que onda contigo")
     }
 ```
+## Ciclos
+En go unicamente existe la directiva for,pero a cambio nos ofrece una gran flexibilidad de esta directiva
+### For like C
+```Go
+    for( i:= 0; i < 15 ; i++ ){
+        // Code Block
+    }
+``` 
+### For infinito
+```Go
+    for{
+
+    }
+```
+### For Each
+Puede Cheacar un ejemplo [aqui](./Ejemplos/function1.go)
+```Go
+    for ind,val := range <list or iterable>{
+
+    }
+```
+### For like while
+```Go
+    for condition{
+
+    }
+```
+
 ## Entrada y Salida de Datos
 
 Para esto Compruebe la parte del [Paquete fmt](#fmt) para comprobar las estructira de las funciones y para verlo en practica cheque el [ejemplo](./Ejemplos/in_out.go)
@@ -174,6 +203,95 @@ Para esto Compruebe la parte del [Paquete fmt](#fmt) para comprobar las estructi
 + Channel in -> ``` varchan<- ```
 + Channel out -> ``` <-varchan ```
 + Tres puntos -> ``` ...var o ...var //Depende ```
+    Nota : Puede Cheacar un ejemplo [aqui](./Ejemplos/function1.go)
+
+## Funciones 
+Una funcion es un segmento de codigo que tiene una tarea determinada a realizar, como podemos ver [aqui](./Ejemplos/function1.go), pero realmente en ciertos momentos del desarrollo donde esa dicha fucion solo sera realizada una unica vez o es necesario pasarla como argumento a alguna funcion, no existe razon para otorgarle un nombre, por esto se desarrollo las ***funciones anonimas***
+
+### Funciones anonimas
+***Nota importante***: las funciones en golang son ciudadanos importantes, es decir son un tipo de dato, con todo lo que esto implica
+
+Como ya lo mencione antes esto se refiere a que estas no tienen un identificador o nombre
+
+Ya que esto es algo complicado de explicar con palabras, acuda al [ejemplo](./Ejemplos/function2.go) para una mejor comprencion
+
+```GO
+//Sintaxis sin ejecucion
+    func()(Valores de retorno){
+
+    }
+//Sintaxis con ejecucion
+    func()(Valores de retorno){
+
+    }()
+```
+### Closures
+Estos nacieron de la existencia de funciones anonimas, esto refiere a funciones que son devuletas por otras, pero las primeras mantienen todo el contexto de las segundas, y pueden realizar operaciones con esto, independientes de todas las que puedan ser resultado de las llamadas independientes a la misma fucion original
+
+Ya que esto es algo complicado de explicar con palabras, acuda al [ejemplo](./Ejemplos/function2.go) para una mejor comprencion
+
+
+## Arrays
+Vectores estaticos en tamaño que solo pueden almacenar un tipo de dato especifico
+
+```Go
+//Sintaxis
+    var Nombre [Tam]TipodeDatoUnitario
+// Ejemplo
+    var arr [10]int
+    var calif [5]int{9,10,10,9,10}
+```
+longitud de un arreglo
+```Go
+    var calif [5]int{9,10,10,9,10}
+
+    len(calif)
+```
+## Slice
+Su tamaño puede ser apliable si es necesario
+
+```Go
+//Sintaxis
+    var Nombre []TipodeDatoUnitario
+// Ejemplo
+    var calif []int{9,10,10,9,10}
+    calif[1:]
+//sintaxis (make)
+//La capacidad es el tamaño con el que creara el slice para evitar el tiempo de apliarlo cada vez y len es el espacio que tenemo disponible para control mientras no solicitemos mas
+    sslice := make([]TipoDeDatoUnitario,Longitud,Capacidad)
+//Ejemplo 
+    elementos := make([]int,5,20)
+```
+### Agregar elementos al final
+```Go
+    var calif []int{9,10,10,9,10}
+
+    calif = append(calif,5)
+```
+
+## Map o Diccionarios
+Son objetos iterables muy parecidos a los slice solo que los indices no son numeriocos (0,1,2,3 ...), son de un tipo designado cualquiera inmutable,
+
+Se dicen que un diccionario es un conjunto de elementos clave:valor
+
+```Go
+// Creacion de un map
+    // Version 1
+    mappa := make(map[<TipoParaLaLlave>]<TipoParaValor>)
+
+    // Version 2
+    mapppa := map[<TipoParaLaLlave>]<TipoParaElValor>
+
+// Cargar datos
+    //Directamente
+    mapppa := map[<TipoParaLaLlave>]<TipoParaElValor>{
+        Llave:Valor,
+        Llave:Valor,
+    }
+//Eliminar Datos
+    delete(VariableMap,<Clave aa eliminar>)
+```
+[Aqui](./Ejemplos/maps.go) un ejemplo de Maps
 
 <a name="fmt"></a>
 ## Package fmt
