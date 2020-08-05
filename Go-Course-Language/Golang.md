@@ -93,6 +93,9 @@ para esto es necesario la funcion main en el cuerpo del programa, a menos que el
     ```
 
 + ***Interfaces***
+
+    Puede Cheacar un ejemplo [aqui](./Ejemplos/Interfaces.go)
+    Y puede checar más informacion [aqui](#Interfaces)
     ```Go
             type nameInterface interface{
                 nameFunc(Arguments) ReturnValues
@@ -108,7 +111,28 @@ para esto es necesario la funcion main en el cuerpo del programa, a menos que el
 
         }
     ```
++ ***Channels***
 
+    ```Go
+        //Declaracion canal read only 
+        readonly := make(<-chan <TipoDeDato>,<TamañoDelBuffer>)
+        
+        //Declaracion canal send only
+        sendonly := make(chan<- <TipoDeDato>,<TamañoDelBuffer>)
+
+        //Declaracion canal bidireccional
+        channell := make(chan <TipoDeDato>,<TamañoDelBuffer>)
+
+        //Ejemplo
+        // Canal read only 
+        readonly := make(<-chan float64,6>)
+        
+        // Canal send only
+        sendonly := make(chan<- string)
+
+        // Canal bidireccional
+        channell := make(chan int,2)
+    ```
 ### Conversion de Tipos
 Esto es tan sencillo como lo siguiente
 
@@ -304,6 +328,13 @@ Se dicen que un diccionario es un conjunto de elementos clave:valor
 Una estructura es una forma de ordenar valores que tendran una relacion estrecha entre si, como pueden ser las caracteristicas de un objeto como tal, por lo que en ***Go*** se dice que a pesar de no contar con un manejo de POO como tal, que este si cuenta con el, esto es gracias a el uso de Estructuras.
 
 En el [ejemplo](./Ejemplos/Estructuras.go) podemos ver una muestra de esto los atributos metodos y herencia, como polimorfismo
+
+<a name = "Interfaces"></a>
+## Interfaces
+Es un conjunto de funciones que actuan como propiedades de las estructuras como tal.
+
+Esto no permite agrupar distintos tipos de estructuras en super grupos, [Aqui](./Ejemplos/Interfaces.go) un ejemplo
+
     
 ```Go
     type nameStructure struct{
@@ -313,6 +344,11 @@ En el [ejemplo](./Ejemplos/Estructuras.go) podemos ver una muestra de esto los a
     }
 ```
 
+## Canales
+
+Los canales o Channels en ingles, son tipo de dato auxilira, que nos permite comunicar datos entre gorutinas o goroutines, sin necesidad de variables globales o memoria compartida, sin necesidad de sincronización por atomic o semaphores mutex
+
+Estos sumamente utiles en Go, ya que nos permiten hacer maravillas sin codigo complicado
 
 
 <a name="fmt"></a>
