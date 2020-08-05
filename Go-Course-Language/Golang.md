@@ -82,6 +82,7 @@ para esto es necesario la funcion main en el cuerpo del programa, a menos que el
     ```
 
 + ** Estructuras **
+    Para más informaciń [aqui](#Estrucuras)
     ```Go
         type nameStructure struct{
             variables int
@@ -99,6 +100,7 @@ para esto es necesario la funcion main en el cuerpo del programa, a menos que el
 
 + ** Funciones **
     Puede Cheacar un ejemplo [aqui](./Ejemplos/function1.go)
+    Y puede checar más informacion [aqui](#functions)
     ```Go
         func (r receptor) FunctionName(Argument) (Returns values{
 
@@ -205,6 +207,7 @@ Para esto Compruebe la parte del [Paquete fmt](#fmt) para comprobar las estructi
 + Tres puntos -> ``` ...var o ...var //Depende ```
     Nota : Puede Cheacar un ejemplo [aqui](./Ejemplos/function1.go)
 
+<a name="functions"></a>
 ## Funciones 
 Una funcion es un segmento de codigo que tiene una tarea determinada a realizar, como podemos ver [aqui](./Ejemplos/function1.go), pero realmente en ciertos momentos del desarrollo donde esa dicha fucion solo sera realizada una unica vez o es necesario pasarla como argumento a alguna funcion, no existe razon para otorgarle un nombre, por esto se desarrollo las ***funciones anonimas***
 
@@ -293,6 +296,20 @@ Se dicen que un diccionario es un conjunto de elementos clave:valor
 //Eliminar Datos
     delete(VariableMap,<Clave aa eliminar>)
 ```
+<a name = "Estrucuras"></a>
+## Estructuras
+Una estructura es una forma de ordenar valores que tendran una relacion estrecha entre si, como pueden ser las caracteristicas de un objeto como tal, por lo que en ***Go*** se dice que a pesar de no contar con un manejo de POO como tal, que este si cuenta con el, esto es gracias a el uso de Estructuras.
+
+En el [ejemplo](./Ejemplos/Estructuras.go) podemos ver una muestra de esto los atributos metodos y herencia, como polimorfismo
+    ```Go
+        type nameStructure struct{
+            variables int
+            variabbles string
+            others float64
+        }
+    ```
+
+
 
 <a name="fmt"></a>
 ## Package fmt
