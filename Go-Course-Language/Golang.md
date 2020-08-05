@@ -207,6 +207,7 @@ Para esto Compruebe la parte del [Paquete fmt](#fmt) para comprobar las estructi
 + Channel in -> ``` varchan<- ```
 + Channel out -> ``` <-varchan ```
 + Tres puntos -> ``` ...var o ...var //Depende ```
+    
     Nota : Puede Cheacar un ejemplo [aqui](./Ejemplos/function1.go)
 
 <a name="functions"></a>
