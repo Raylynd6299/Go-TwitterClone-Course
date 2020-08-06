@@ -5,13 +5,18 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/Raylynd6299/Go-TwitterClone-Course.git/middleware"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 )
 
 // Manejadores Configuro el puerto el handler y pongo a escuchar al servidor
 func Manejadores() {
+	//Manejador de Rutas
 	router := mux.NewRouter()
+
+	//Rutas
+	router.HandleFunc("/registro", middleware.ChequeoBD(routers.Registro)).Methods("POST")
 
 	//Puerto a manejar
 	PORT := os.Getenv("PORT")
