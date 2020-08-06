@@ -350,6 +350,34 @@ Los canales o Channels en ingles, son tipo de dato auxilira, que nos permite com
 
 Estos sumamente utiles en Go, ya que nos permiten hacer maravillas sin codigo complicado
 
+## Goroutines
+
+Son funciones asincronas que corren en el multicore y multithreading, por lo que realmente permite hacer programacion concurrente eh incluso paralela.
+
+En go la funcion flujo "main", tambien es una goroutina, y una vez con esto en mente podran entender esto.
+
+En go todas las goroutines van a terminar a mas tardar cuando la gorutine padre de estas termine
+
+```Go
+// Sintaxis
+    go func (<Parametros>)(<tipos de valores de retorno>){
+        <Bloque de Codigo>
+    }(<argumentos>)
+//Ejemplo
+
+    calificaciones := []int{5,5,6,8,9,10} 
+    salida := make(chan float64)
+
+    go func (numeros ...int) float64{
+        numcalif,sum:=0,0
+        for num := range numeros{
+            numcalif++
+            sum += num
+        }
+        salida <- sum/numcalif
+    }
+```
+
 
 <a name="fmt"></a>
 ## Package fmt
