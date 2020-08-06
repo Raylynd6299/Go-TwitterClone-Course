@@ -1,2 +1,0 @@
-Logramos exscribir una linea en un archivo nuevo
-Esta es una segunda linea
