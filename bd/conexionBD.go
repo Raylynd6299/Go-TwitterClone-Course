@@ -26,7 +26,7 @@ func ConectarBD() *mongo.Client {
 		log.Fatal("Error en la BD de mongo", err.Error())
 		return client
 	}
-	log.Println("Conexion Exitosacon la BD")
+	log.Println("Coneccion Exitosa a la BD")
 	return client
 }
 
