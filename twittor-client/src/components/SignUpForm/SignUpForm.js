@@ -1,16 +1,52 @@
 import React, {useState} from 'react'
-import { Button, Form, Col, Row} from "react-bootstrap";
+import { Button, Form, Col, Row, Spinner} from "react-bootstrap";
+import { values, size, flatMap } from "lodash";
+import { toast } from "react-toastify"
+import {isEmailValid} from "../../utils/validations"
+import { signUpApi } from "../../api/auth"
 
 import "./SignUpForm.scss"
 
 export default function SignUpForm(props) {
     const {setShowModal} = props;
     const [formData, setFormData] = useState(initialFormValue())
+    const [signUpLoading, setSignUpLoading] = useState(false)
 
     const onSubmit = e => {
         e.preventDefault();
-        setShowModal(false);
-        console.log(formData)
+
+        let validCount = 0
+        values(formData).some(value =>{
+            value && validCount++;
+            return null;
+        });
+
+        if (validCount !== size(formData)) {
+            toast.warning("Completa todos los campos del formulario")
+        } else{
+            if (!isEmailValid(formData.email)) {
+                 toast.warning("Email invalido")
+            }else if(formData.password !== formData.repeatPassword){
+                toast.warning("Las contraseñas no son iguales")
+            }else if(size(formData.password) < 6){
+                toast.warning("La contraseña tiene que tener al menos 6 caracteres")
+            }else{
+                setSignUpLoading(true)
+                signUpApi(formData).then(response => {
+                    if(response.code) {
+                        toast.warning(response.message)
+                    }else{
+                        toast.success("El registro ha sido correcto")
+                        setShowModal(false)
+                        setFormData(initialFormValue())
+                    }
+                }).catch(()=>{
+                    toast.error("Error del servidor, intentelo mas tarde")
+                }).finally(()=>{
+                    setSignUpLoading(false);
+                })
+            }
+        }
     }
 
     const onChange = e => {
@@ -19,7 +55,7 @@ export default function SignUpForm(props) {
     //onChange={e=>setFormData({...formData,nombre: e.target.value})}
 
     return (
-        <div>
+        <div className="sign-up-form">
             <h2>Crea tu cuenta</h2>
             <Form onSubmit = {onSubmit} onChange={onChange}>
                 <Form.Group>
@@ -46,8 +82,10 @@ export default function SignUpForm(props) {
                     </Row>
                 </Form.Group>
 
-
-                <Button variant="primary" type= "submit">Registrate</Button>
+                
+                <Button variant="primary" type= "submit">
+                    {!signUpLoading ? "Registrarse" : <Spinner animation="border"/>}
+                </Button>
             </Form> 
         </div>
     )

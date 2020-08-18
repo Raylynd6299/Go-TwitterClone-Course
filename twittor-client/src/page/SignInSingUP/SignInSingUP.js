@@ -6,13 +6,14 @@ import {} from "@fortawesome/fontawesome-svg-core";
 
 import BasicModal from "../../components/Modal/BasicModal"
 import SignUpForm from "../../components/SignUpForm"
-
+import SignInForm from "../../components/SignInForm"
 import LogoWhiteTwittor from "../../assets/png/logo-white.png"
 import LogoTwittor from "../../assets/png/logo.png"
 
 import "./SignInSingUP.scss"
 
-export default function SignInSingUP() {
+export default function SignInSingUP(props) {
+    const {setRefreshCheckLogin} = props
     const [showModal, setShowModal] = useState(false);
     const [contentModal, setContentModal] = useState(null);
 
@@ -26,7 +27,7 @@ export default function SignInSingUP() {
         <Container className="signin-signup" fluid>
             <Row>
                 <LeftComponent/>
-                <RightComponent openModal = {openModal} setShowModal = {setShowModal}/>
+                <RightComponent openModal = {openModal} setShowModal = {setShowModal} setRefreshCheckLogin ={setRefreshCheckLogin}/>
             </Row>
         </Container>
        <BasicModal show = {showModal} setShow = {setShowModal} >
@@ -58,6 +59,7 @@ function LeftComponent(){
     )
 }
 function RightComponent(props){
+    const {setRefreshCheckLogin} = props
     const {openModal, setShowModal } = props;
     return (
         <Col className="signin-signup__right" xs={6}>
@@ -68,9 +70,7 @@ function RightComponent(props){
                 <Button onClick = {() => openModal(
                     <SignUpForm setShowModal = {setShowModal} />
                 )} variant="primary">Regístrate</Button>
-                <Button onClick = {() => openModal(
-                    <h2>Formulario de Inicio de Login</h2>
-                )} variant="outline-primary">Iniciar Sesion</Button>
+                <Button onClick = {() => openModal(<SignInForm setRefreshCheckLogin = {setRefreshCheckLogin}/>)} variant="outline-primary">Iniciar Sesion</Button>
             </div>
         </Col>
     )
