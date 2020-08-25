@@ -1,0 +1,29 @@
+.config-modal .modal-content {
+  background-color: #15212b;
+  border-radius: 25px;
+}
+.config-modal .modal-content .modal-header {
+  border-bottom: 1px solid #38444d;
+  padding: 15px;
+}
+.config-modal .modal-content .modal-header .modal-title {
+  display: flex;
+  align-items: center;
+}
+.config-modal .modal-content .modal-header .modal-title svg {
+  width: 15px;
+  height: 15px;
+  fill: #1da0f2;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.config-modal .modal-content .modal-header .modal-title svg:hover {
+  cursor: pointer;
+}
+.config-modal .modal-content .modal-header .modal-title h2 {
+  font-size: 18px;
+  margin: 0;
+}
+.config-modal .modal-content .modal-body {
+  padding: 0;
+}

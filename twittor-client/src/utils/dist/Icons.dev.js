@@ -21,9 +21,25 @@ Object.defineProperty(exports, "DateBirth", {
     return _dateBirth.ReactComponent;
   }
 });
+Object.defineProperty(exports, "Close", {
+  enumerable: true,
+  get: function get() {
+    return _close.ReactComponent;
+  }
+});
+Object.defineProperty(exports, "Camera", {
+  enumerable: true,
+  get: function get() {
+    return _camara.ReactComponent;
+  }
+});
 
 var _location = require("../assets/svg/location.svg");
 
 var _link = require("../assets/svg/link.svg");
 
 var _dateBirth = require("../assets/svg/date-birth.svg");
+
+var _close = require("../assets/svg/close.svg");
+
+var _camara = require("../assets/svg/camara.svg");
