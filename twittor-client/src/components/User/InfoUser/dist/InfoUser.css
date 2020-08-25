@@ -1,0 +1,37 @@
+.info-user {
+  margin: 20px;
+}
+.info-user * {
+  margin: 0;
+}
+.info-user svg {
+  width: 15px;
+  height: 15px;
+  fill: #8799a6;
+}
+.info-user .name {
+  font-size: 18px;
+  font-weight: bold;
+}
+.info-user .email {
+  font-size: 14px;
+  color: #8799a6;
+}
+.info-user .description {
+  margin: 10px 0;
+  white-space: pre-line;
+}
+.info-user .more-info {
+  display: flex;
+  align-items: center;
+}
+.info-user .more-info p, .info-user .more-info a {
+  color: #8799a6;
+  padding-right: 20px;
+}
+.info-user .more-info p svg, .info-user .more-info a svg {
+  margin-right: 10px;
+}
+.info-user .more-info a {
+  color: #1da0f2;
+}

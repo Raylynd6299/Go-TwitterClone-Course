@@ -1,0 +1,9 @@
+.user__title {
+  border-bottom: 1px solid #38444d;
+  padding: 15px;
+}
+.user__title h2 {
+  font-size: 22px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
