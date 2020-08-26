@@ -1,10 +1,12 @@
 import React, {useState,useCallback} from 'react'
-import {Form,Button, Row, Col} from "react-bootstrap"
+import {Form,Button, Row, Col, Toast,Spinner} from "react-bootstrap"
 import DatePicker from "react-datepicker";
 import es from "date-fns/locale/es"
 import { useDropzone} from "react-dropzone"
 import {API_HOST} from "../../../utils/constant"
 import {Camera} from "../../../utils/Icons"
+import {uploadBannerApi,uploadAvatarApi,updateInfoApi} from "../../../api/user"
+import {toast} from "react-toastify"
 
 import "./EditUserForm.scss";
 
@@ -15,12 +17,12 @@ export default function EditUserForm(props) {
     const [bannerFile, setBannerFile] = useState(null)
     const [avatarUrl, setAvatarUrl] = useState(user?.avatar ? `${API_HOST}/obtenerAvatar?id=${user.id}`:null)
     const [avatarFile, setAvatarFile] = useState(null)
+    const [loading, setLoading] = useState(false)
 
     const onDropBanner = useCallback(acceptedFile => {
         const file = acceptedFile[0];
         setBannerUrl(URL.createObjectURL(file))
         setBannerFile(file)
-        console.log(acceptedFile)
     })
     const {getRootProps: getRootBannerProps,getInputProps:getInputBannerProps} = useDropzone({
         accept: "image/png, image/jpeg",
@@ -32,7 +34,6 @@ export default function EditUserForm(props) {
         const file = acceptedFile[0];
         setAvatarUrl(URL.createObjectURL(file))
         setAvatarFile(file)
-        console.log(acceptedFile)
     })
     const {getRootProps: getRootAvatarProps,getInputProps:getInputAvatarProps} = useDropzone({
         accept: "image/png, image/jpeg",
@@ -41,13 +42,29 @@ export default function EditUserForm(props) {
         onDrop: onDropAvatar
     });
     const onChange = e => {
-        setFormData({ ...formData,[e.traget.name]:e.target.value})
+        setFormData({ ...formData,[e.target.name]:e.target.value})
     }
 
-    const onSubmit = e=>{
+    const onSubmit = async (e) =>{
         e.preventDefault();
-        console.log("Editando el usuario")
-        console.log(formData)
+        setLoading(true)
+        if (bannerFile) {
+            await uploadBannerApi(bannerFile).catch(()=>{
+                toast.error("Error al subir el nuevo banner");
+            })
+        }
+        if (avatarFile) {
+            await uploadAvatarApi(avatarFile).catch(()=>{
+                toast.error("Error al subir el nuevo avatar");
+            })
+        }
+        await updateInfoApi(formData).then(()=>{
+            setShowModal(false);
+        }).catch(()=>{
+            toast.error("Error al actualizar los datos");
+        })
+        setLoading(false)
+        window.location.reload();
     }
     return (
         <div className="edit-user-form">
@@ -80,7 +97,7 @@ export default function EditUserForm(props) {
                     <DatePicker placeholder="Fecha de Nacimineto" locale={es} selected={new Date(formData.fechaNacimiento)}  onChange={date => setFormData({...formData,fechaNacimiento:date})}/>
                 </Form.Group>
                 <Button className="btn-submit" variant="primary" type="submit">
-                    Actualizar
+                    {loading && <Spinner animation="border" size="sm"/>} Actualizar
                 </Button> 
             </Form>
         </div>
