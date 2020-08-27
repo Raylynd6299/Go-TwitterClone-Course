@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Container, Row, Col, Button } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSearch, faUser, faUsers, faComment } from "@fortawesome/free-solid-svg-icons"
+import { faSearch, faUsers, faComment } from "@fortawesome/free-solid-svg-icons"
 import {} from "@fortawesome/fontawesome-svg-core";
 
 import BasicModal from "../../components/Modal/BasicModal"

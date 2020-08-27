@@ -1,5 +1,5 @@
 import React, {useState,useCallback} from 'react'
-import {Form,Button, Row, Col, Toast,Spinner} from "react-bootstrap"
+import {Form,Button, Row, Col,Spinner} from "react-bootstrap"
 import DatePicker from "react-datepicker";
 import es from "date-fns/locale/es"
 import { useDropzone} from "react-dropzone"

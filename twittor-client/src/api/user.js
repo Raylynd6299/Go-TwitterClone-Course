@@ -12,7 +12,7 @@
     }
 
     return fetch(url,params).then(response => {
-        if(response.status >= 400) throw null
+        if(response.status >= 400){return null};
         return response.json();
     }).then(result => {
         return result;

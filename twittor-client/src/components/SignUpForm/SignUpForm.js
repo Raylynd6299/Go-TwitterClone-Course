@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Button, Form, Col, Row, Spinner} from "react-bootstrap";
-import { values, size, flatMap } from "lodash";
+import { values, size } from "lodash";
 import { toast } from "react-toastify"
 import {isEmailValid} from "../../utils/validations"
 import { signUpApi } from "../../api/auth"

@@ -20,5 +20,35 @@
                 }
             }
         }
+
+        .modal-body {
+            padding: 0;
+            form{
+                textarea {
+                    background-color: $background-grey-dark;
+                    border: 0;
+                    font-size: 20px;
+                    color: $font-light;
+                    padding: 10px 20px;
+                    resize: none;
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+                .count{
+                    margin: 15px;
+                    &.error {
+                        color:$danger;
+                    }
+                }
+                button {
+                    width: 100%;
+                    height: 60px;
+                    font-weight: bold;
+                    font-size: 18px;
+                    margin-top: 10px;
+                }
+            }
+        }
     }
 }

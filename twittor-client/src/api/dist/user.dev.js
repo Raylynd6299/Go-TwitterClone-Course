@@ -21,7 +21,11 @@ function getUserApi(id) {
     }
   };
   return fetch(url, params).then(function (response) {
-    if (response.status >= 400) throw null;
+    if (response.status >= 400) {
+      return null;
+    }
+
+    ;
     return response.json();
   }).then(function (result) {
     return result;
