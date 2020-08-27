@@ -1,0 +1,18 @@
+.tweet-modal .modal-content {
+  background-color: #15212b;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.tweet-modal .modal-content .modal-header {
+  border-bottom: 1px solid #38444d;
+  padding: 15px;
+}
+.tweet-modal .modal-content .modal-header .modal-title svg {
+  width: 15px;
+  height: 15px;
+  fill: #1da0f2;
+  margin-left: 10px;
+}
+.tweet-modal .modal-content .modal-header .modal-title svg:hover {
+  cursor: pointer;
+}
