@@ -35,3 +35,13 @@
   background-color: #1da0f2;
   opacity: 0.6;
 }
+.banner-avatar .options button.unfollow:hover {
+  border-color: #e0245e;
+  background-color: #e0245e;
+}
+.banner-avatar .options button.unfollow:hover::before {
+  content: "Dejar de Seguir";
+}
+.banner-avatar .options button.unfollow:hover span {
+  display: none;
+}
