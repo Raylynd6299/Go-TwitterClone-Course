@@ -1,0 +1,13 @@
+.list-users {
+  padding: 0;
+}
+.list-users__user {
+  padding: 15px 30px;
+  color: #fff;
+  border-bottom: 1px solid #38444d;
+}
+.list-users__user:hover {
+  color: #fff;
+  background-color: #192734;
+  text-decoration: none;
+}

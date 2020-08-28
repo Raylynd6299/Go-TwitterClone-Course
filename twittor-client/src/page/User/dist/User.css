@@ -12,3 +12,15 @@
   font-size: 18px;
   border-bottom: 1px solid #38444d;
 }
+.user__tweets > .btn.btn-primary {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 0;
+}
+.user__tweets > .btn.btn-primary:hover, .user__tweets > .btn.btn-primary:focus {
+  background-color: transparent !important;
+  color: #1da0f2;
+}

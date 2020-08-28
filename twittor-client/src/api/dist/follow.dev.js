@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.checkFollow = checkFollow;
 exports.followUserApi = followUserApi;
 exports.unfollowUserApi = unfollowUserApi;
+exports.getFolowsApi = getFolowsApi;
 
 var _constant = require("../utils/constant");
 
@@ -48,6 +49,22 @@ function unfollowUserApi(idUser) {
   var url = "".concat(_constant.API_HOST, "/bajaRelacion?id=").concat(idUser);
   var params = {
     method: "DELETE",
+    headers: {
+      Authorization: "Bearer ".concat((0, _auth.getTokenApi)())
+    }
+  };
+  return fetch(url, params).then(function (response) {
+    return response.json();
+  }).then(function (result) {
+    return result;
+  })["catch"](function (err) {
+    return err;
+  });
+}
+
+function getFolowsApi(paramsUrl) {
+  var url = "".concat(_constant.API_HOST, "/listaUsuarios?").concat(paramsUrl);
+  var params = {
     headers: {
       Authorization: "Bearer ".concat((0, _auth.getTokenApi)())
     }

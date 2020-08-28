@@ -11,9 +11,15 @@ var _User = _interopRequireDefault(require("../page/User"));
 
 var _Error = _interopRequireDefault(require("../page/Error404"));
 
+var _Users = _interopRequireDefault(require("../page/Users"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = [{
+  path: "/users",
+  exact: true,
+  page: _Users["default"]
+}, {
   path: "/:id",
   exact: true,
   page: _User["default"]
