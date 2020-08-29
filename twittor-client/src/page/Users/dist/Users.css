@@ -47,3 +47,15 @@
 .users__loading > div {
   margin-bottom: 10px;
 }
+.users .load-more.btn.btn-primary {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 0;
+}
+.users .load-more.btn.btn-primary:hover, .users .load-more.btn.btn-primary:focus {
+  background-color: transparent !important;
+  color: #1da0f2;
+}

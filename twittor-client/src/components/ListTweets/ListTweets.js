@@ -26,7 +26,7 @@ function Tweet(props) {
     const [userInfo, setUserInfo] = useState(null)
     const [avatarUrl, setAvatarUrl] = useState(null)
     useEffect(() => {
-        getUserApi(tweet.userid).then((response) => {
+        getUserApi(tweet?.userid).then((response) => {
             setUserInfo(response)
             setAvatarUrl(
                 response?.avatar ? `${API_HOST}/obtenerAvatar?id=${response.id}`:AvatarNotFound

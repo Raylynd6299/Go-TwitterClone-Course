@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.addTweetApi = addTweetApi;
 exports.getUserTweetsApi = getUserTweetsApi;
+exports.getTweetsFollowersApi = getTweetsFollowersApi;
 
 var _constant = require("../utils/constant");
 
@@ -52,6 +53,22 @@ function getUserTweetsApi(idUser, page) {
     return response.json();
   }).then(function (result) {
     return result;
+  })["catch"](function (err) {
+    return err;
+  });
+}
+
+function getTweetsFollowersApi() {
+  var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  var url = "".concat(_constant.API_HOST, "/leoTweetsSeguidores?pagina=").concat(page);
+  var params = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer ".concat((0, _auth.getTokenApi)())
+    }
+  };
+  return fetch(url, params).then(function (response) {
+    return response.json();
   })["catch"](function (err) {
     return err;
   });
