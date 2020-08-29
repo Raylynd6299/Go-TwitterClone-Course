@@ -7,3 +7,15 @@
   margin-bottom: 0;
   font-weight: bold;
 }
+.home .load-more.btn.btn-primary {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 0;
+}
+.home .load-more.btn.btn-primary:hover, .home .load-more.btn.btn-primary:focus {
+  background-color: transparent !important;
+  color: #1da0f2;
+}
